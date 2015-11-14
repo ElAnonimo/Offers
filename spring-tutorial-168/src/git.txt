@@ -1,4 +1,2 @@
 Git test message.
 Test addition 1.
-Addition 2 for the remote.
-Addition for the newestBranch.
