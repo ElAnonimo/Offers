@@ -38,12 +38,12 @@
 		<!-- <security:intercept-url pattern="/offers" access="permitAll" /> -->
 		<security:intercept-url pattern="/**" access="denyAll" />
 		<security:form-login login-page="/login"
-			authentication-failure-url="/login?error=true" />
+			authentication-failure-url="/login?error=true"
+			always-use-default-target="true" default-target-url="/" />
 		<!-- <security:logout logout-success-url="/home" invalidate-session="true" logout-url="/loggedout" /> -->
 		<security:logout logout-success-url="/loggedout" invalidate-session="true" />
 		<security:access-denied-handler error-page="/denied" />
-		<security:remember-me key="offersAppKey"
-			user-service-ref="jdbcUserService" />
+		<security:remember-me key="offersAppKey" user-service-ref="jdbcUserService" />
 	</security:http>
 
 	<security:global-method-security secured-annotations="enabled"></security:global-method-security>
